@@ -4,3 +4,20 @@
   /*border-top: #424650 1px solid;*/
   padding-top: 40px;
 }
+
+.social-links {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.social-container ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.social-container ul li {
+  display: inline-block;
+  padding: 5px;
+}
