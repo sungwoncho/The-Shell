@@ -9,11 +9,22 @@
 
         {{! Each post has the blog logo at the top, with a link back to the home page }}
         <header class="post-header">
-            <a id="blog-logo" href="{{@blog.url}}">
+
                 {{#if @blog.logo}}
-                    <img src="{{@blog.logo}}" alt="Blog Logo" />
+                    <a id="blog-logo" href="{{@blog.url}}">
+                        <img src="{{@blog.logo}}" alt="Blog Logo" />
+                    </a>
                 {{else}}
-                    {{@blog.title}}
+                    <div class="post-header-content">
+                        <a href="{{@blog.url}}" id="post-blog-title">
+                            <h1>
+                                {{@blog.title}}
+                            </h1>
+                        </a>
+                        <p>
+                            <a href="http://vym.io">Go to vym.io</a>
+                        </p>
+                    </div>
                 {{/if}}
             </a>
         </header>
@@ -29,11 +40,11 @@
         <section class="post-content">
             {{content}}
         </section>
-        
+
         <div id="disqus_thread"></div>
         <script type="text/javascript">
-            var disqus_shortname = d_id; 
-        
+            var disqus_shortname = d_id;
+
             /* * * DON'T EDIT BELOW THIS LINE * * */
             (function() {
                 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -43,7 +54,7 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        
+
 
         <footer class="post-footer">
 
